@@ -69,9 +69,12 @@ $form.Topmost = $true
 
 $result = $form.ShowDialog()
 
-if ($result -eq [System.Windows.Forms.DialogResult]::OK)
+if (($result -eq [System.Windows.Forms.DialogResult]::OK) -and ($listBox.SelectedItem -eq "Personal" -or $listBox.SelectedItem -eq "Shared"))
 {
     $GroupTag = $listBox.SelectedItem
-    #$GroupTag = $x
+}
+else
+{
+    iex (irm https://raw.githubusercontent.com/MSP-AVG/CL/refs/heads/main/cl-ap-menu.ps1)
 }
 Show-PowershellWindow
