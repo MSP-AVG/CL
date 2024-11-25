@@ -37,13 +37,13 @@ $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
 $form.AcceptButton = $okButton
 $form.Controls.Add($okButton)
 
-$cancelButton = New-Object System.Windows.Forms.Button
-$cancelButton.Location = New-Object System.Drawing.Point(225,300)
-$cancelButton.Size = New-Object System.Drawing.Size(75,23)
-$cancelButton.Text = 'Cancel'
-$cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
-$form.CancelButton = $cancelButton
-$form.Controls.Add($cancelButton)
+#$cancelButton = New-Object System.Windows.Forms.Button
+#$cancelButton.Location = New-Object System.Drawing.Point(225,300)
+#$cancelButton.Size = New-Object System.Drawing.Size(75,23)
+#$cancelButton.Text = 'Cancel'
+#$cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+#$form.CancelButton = $cancelButton
+#$form.Controls.Add($cancelButton)
 
 $label = New-Object System.Windows.Forms.Label
 $label.Location = New-Object System.Drawing.Point(10,20)
@@ -57,6 +57,7 @@ $listBox.Size = New-Object System.Drawing.Size(260,20)
 $listBox.Height = 240
 $listBox.Width  = 300
 [void] $listBox.Items.Add('-------- Consulytics --------')
+[void] $listBox.Items.Add('')
 [void] $listBox.Items.Add('Personal')
 [void] $listBox.Items.Add('Shared')
 [void] $listBox.Items.Add('')
@@ -70,7 +71,7 @@ $result = $form.ShowDialog()
 
 if ($result -eq [System.Windows.Forms.DialogResult]::OK)
 {
-    $x = $listBox.SelectedItem
-    $GroupTag = $x
+    $GroupTag = $listBox.SelectedItem
+    #$GroupTag = $x
 }
 Show-PowershellWindow
