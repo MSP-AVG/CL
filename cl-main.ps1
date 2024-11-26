@@ -4,7 +4,8 @@ Creates Setup Complete Files
 #>
 
 Set-ExecutionPolicy Bypass -Force
-iex (irm https://raw.githubusercontent.com/MSP-AVG/CL/refs/heads/main/cl-ap-menu.ps1)
+# No menu at this time, only Personal devices available
+# iex (irm https://raw.githubusercontent.com/MSP-AVG/CL/refs/heads/main/cl-ap-menu.ps1)
 
 Write-Host -Foreground Red $GroupTag
 sleep -Seconds 3
